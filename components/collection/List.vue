@@ -82,7 +82,7 @@
               </tr>
             </thead>
             <tbody class="divide-y divide-gray-200 bg-white">
-              <tr v-for="project in props.projectData" :key="project.name">
+              <tr v-for="(project,index) in props.projectData" :key="project.name">
                 <td
                   class="whitespace-nowrap py-2 pl-4 pr-3 text-sm text-gray-500 sm:pl-0"
                 >
@@ -117,7 +117,7 @@
                   ></PencilSquareIcon>
 
                   <TrashIcon
-                    @click="deleteProject(project.name)"
+                    @click="deleteProject(project.uid,index)"
                     class="h-5 w-5"
                     aria-hidden="true"
                   ></TrashIcon>
@@ -145,8 +145,8 @@ const openAddsidebar = () => {
 const openEditsidebar = (value) => {
   emit("openEditSidebar", value);
 };
-const deleteProject=(name)=>{
- emit("deleteNotes",name)
+const deleteProject=(id,index)=>{
+ emit("deleteProject",id,index)
 
 }
 </script>

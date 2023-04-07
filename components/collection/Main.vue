@@ -18,6 +18,7 @@
       :projectAge="projectAge"
       :logo="logo"
       :defaultImage="defaultImage"
+      @putData="putData"
     />
   </div>
 </template>
@@ -90,7 +91,7 @@ const openEditSidebar = (data: any) => {
     postoptions
   );
 }
-const  deleteProject=(id:any)=>{
+const  deleteProject=(id:any,index:any)=>{
     const deleteOptions = {
     method: "DELETE",
     headers: {
@@ -103,15 +104,12 @@ const  deleteProject=(id:any)=>{
     `https://v1-orm-gharpe.mercury.infinity-api.net/api/projects/${id}`,
     deleteOptions
   );
-projects.value.forEach((item:any,index:any)=>{
-    (item.uid==id)?
-    projects.value.splice(index, 1):""
-      }) 
+    projects.value.splice(index, 1)
 }
 const putData=(individualData:any)=> {
 let body={
    name: individualData.value.name,
-      listing_type_name: individualData.listName,
+      listing_type_name: individualData.value.listName,
       category: "Residential",
       sub_category: "Apartment",
       status: "Fully Constructed",

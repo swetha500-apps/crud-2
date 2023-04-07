@@ -162,7 +162,7 @@
                         <button
                           type="button"
                           class="float-right mt-3 rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                          @click="postData"
+                          @click="putData"
                         >
                           Save
                         </button>
@@ -220,6 +220,7 @@ const props = defineProps({
     type: String,
   },
 });
+const emit=defineEmits(["putData"])
 name.value = props.name;
 listName.value = props.listName;
 details.value = props.details;
@@ -227,4 +228,15 @@ specifications.value = props.specifications;
 projectAge.value = props.projectAge;
 logo.value = props.logo;
 defaultImage.value = props.defaultImage;
+const putData()=>{
+  emit("putData",{
+  name = name.value ,
+  listName = listName.value,
+  details =details.value ,
+  specifications = specifications.value,
+  projectAge = projectAge.value,
+  logo =logo.value,
+  defaultImage = defaultImage.value 
+  })
+}
 </script>
