@@ -228,15 +228,15 @@ specifications.value = props.specifications;
 projectAge.value = props.projectAge;
 logo.value = props.logo;
 defaultImage.value = props.defaultImage;
-const putData()=>{
+const putData=()=>{
   emit("putData",{
-  name = name.value ,
-  listName = listName.value,
-  details =details.value ,
-  specifications = specifications.value,
-  projectAge = projectAge.value,
-  logo =logo.value,
-  defaultImage = defaultImage.value 
+  name : name.value ,
+  listName:listName.value,
+  details :details.value ,
+  specifications : specifications.value,
+  projectAge : projectAge.value,
+  logo:logo.value,
+  defaultImage: defaultImage.value 
   })
 }
 </script>
