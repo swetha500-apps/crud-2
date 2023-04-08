@@ -26,7 +26,7 @@
                 </th>
               </tr>
             </thead>
-            <tbody class="bg-white">
+            <tbody class="bg-white"> 
               <tr v-for="(field, fieldIdx) in customFields" :key="field.uid" :class="fieldIdx % 2 === 0 ? undefined : 'bg-gray-50'"  >
                 <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-3">{{ field.name }}</td>
                 <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ field.type }}</td>

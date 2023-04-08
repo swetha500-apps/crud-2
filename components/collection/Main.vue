@@ -57,4 +57,33 @@ const saveCustomField = async (postBody: any) => {
   });
   getData.value.unshift(response.value);
 };
+// Update templates data
+// const edit = async (template: any) => {
+//   const postData = ref({
+//     project_id: props.projectId,
+//     name: template.name,
+//     subject: template.subject,
+//     body: template.body,
+//     is_active: props.isActive,
+//     type: template.type,
+//     share_type: props.shareType,
+//     category: props.entity,
+//   });
+//   // Put call hits when click on save button
+//   const { data: response } = await useLazyFetch(`${props.url}${template.uid}`, {
+//     method: "PUT",
+//     headers: authHeader,
+//     body: postData.value,
+//   });
+//   if (response) {
+//     templates.value.forEach((templateData: any) => {
+//       if (currentTemplate.value.uid === templateData.uid) {
+//         templateData.name = template.name;
+//         templateData.subject = template.subject;
+//         templateData.body = template.body;
+//         templateData.type = template.type;
+//       }
+//     });
+//   }
+// };
 </script>
