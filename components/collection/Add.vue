@@ -44,7 +44,7 @@
                             <option value="TEXTBOX">TEXTBOX</option>
                             <option value="RADIO_BUTTONS">RADIOBUTTONS</option>
                             <option value="MULTI_CHECKBOX">
-                              MULTICHECKBOX
+                              MULTICHECKBOX 
                             </option>
                           
                           </select>

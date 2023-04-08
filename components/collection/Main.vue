@@ -8,7 +8,7 @@ import { ref,defineProps} from 'vue'
 const props = defineProps({
   url: {
     type: String,
-    default: "https://v1-orm-lib.mars.hipso.cc/api/custom-fields/",
+    default: "https://v1-orm-lib.mars.hipso.cc/api/custom-fields/", 
          
   },
   isActive: {
