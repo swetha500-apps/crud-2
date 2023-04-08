@@ -47,6 +47,7 @@ const { data: customFields } = await useLazyFetch(
   }
 );
 getData.value=customFields.value
+console.log("getData.value--->",getData.value)
 // Save customField data
 const saveCustomField = async (postBody: any) => {
   // Post call hits when click on save button
