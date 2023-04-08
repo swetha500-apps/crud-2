@@ -35,13 +35,14 @@
       <input v-model="form.type_data.description" type="text"  id="description" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-3" placeholder="Description" />
     </div>
       <!-- input feild for type -->
-     <label for="type" class="block text-sm font-medium leading-6 text-gray-900 mt-2">Type</label>
+     <label for="type" class=" block text-sm font-medium leading-6 text-gray-900 mt-2">Type</label>
  <select
                             v-model="form.type"
-                            class="block mb-3 px-3 rounded-md border-0 py-3 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-300 sm:text-sm sm:leading-6 w-[100%]"
-                           placeholder="Please select type"
+                            class="bg-white block mb-3 px-3 rounded-md border-0 py-3 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-300 sm:text-sm sm:leading-6 w-[100%]"
+                         
                           >
-                            <option value="TEXTBOX">TEXTBOX</option>
+                            <option value='' selected  >Please select a type</option>
+                            <option value="TEXTBOX" >TEXTBOX</option>
                             <option value="RADIO_BUTTONS">RADIOBUTTONS</option>
                             <option value="MULTI_CHECKBOX">
                               MULTICHECKBOX

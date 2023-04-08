@@ -27,18 +27,24 @@
               </tr>
             </thead>
             <tbody class="bg-white"> 
-              <tr v-for="(field, fieldIdx) in customFields" :key="field.uid" :class="fieldIdx % 2 === 0 ? undefined : 'bg-gray-50'"  @click="emit('edit')">
+              <tr v-for="(field, fieldIdx) in customFields" :key="field.uid" :class="fieldIdx % 2 === 0 ? undefined : 'bg-gray-50'"  >
                 <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-3">{{ field.name }}</td>
                 <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ field.type }}</td>
                  <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ field.type_data.description }}</td>
                 <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ field.type_data.placeholder }}</td>
                 <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500" v-if="field.type_data.is_required==1">Mandatory</td>
                 <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500" v-if="field.type_data.is_required==0">Not Mandatory</td>
-                <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-3">
+                 <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-3"  @click="emit('edit',field)">
+                  <a href="#" class="text-indigo-600 hover:text-indigo-900"
+                    >Edit<span class="sr-only">, {{ field.name }}</span></a 
+                  >
+                </td>
+                <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-3" @click="emit('delete',field.uid,fieldIdx)">
                   <a href="#" class="text-indigo-600 hover:text-indigo-900"
                     >Delete<span class="sr-only">, {{ field.name }}</span></a 
                   >
                 </td>
+               
               </tr>
             </tbody>
           </table>
@@ -55,5 +61,5 @@ const props=defineProps({
   customFields:Object
 })
 // Define emits
-const emit = defineEmits(["add"]);
+const emit = defineEmits(["add","edit","delete"]);
 </script>
