@@ -25,44 +25,53 @@
                
                   <div class="relative flex-1 px-4 py-6 sm:px-6">
                         <div>
+                          <!-- input feild for category -->
      <label for="category" class="block text-sm font-medium leading-6 text-gray-900">Category </label>
     <div class="mt-2">
       <input type="text" id="category" v-model="form.category" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-3" placeholder="" />
     </div> 
-
+ <!-- input feild for skill -->
      <label for="skill" class="block text-sm font-medium leading-6 text-gray-900">Skill</label>
     <div class="mt-2">
       <input type="text" id="skill" v-model="form.skill" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-3" placeholder="" />
     </div> 
+     <!-- input feild for question -->
      <label for="question" class="block text-sm font-medium leading-6 text-gray-900">Question</label>
     <div class="mt-2">
       <input type="text" id="question" v-model="form.question" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-3" placeholder="" />
     </div> 
+     <!-- input feild for answer -->
      <label for="answer" class="block text-sm font-medium leading-6 text-gray-900">Answer</label>
     <div class="mt-2">
       <input type="text" id="answer" v-model="form.answer" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-3" placeholder="" />
     </div> 
+     <!-- input feild for subskill -->
       <label for="sub_skill" class="block text-sm font-medium leading-6 text-gray-900">SubSkill</label>
     <div class="mt-2">
       <input type="text" id="sub_skill" v-model="form.sub_skill" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-3" placeholder="" />
     </div> 
+     <!-- input feild for questionurl -->
       <label for="question_url" class="block text-sm font-medium leading-6 text-gray-900">QuestionURL </label>
     <div class="mt-2">
       <input type="text" id="" v-model="form.question_url" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-3" placeholder="" />
     </div> 
+     <!-- input feild for answerhint -->
       <label for="answer_hint" class="block text-sm font-medium leading-6 text-gray-900"> Answer Hint</label>
     <div class="mt-2">
       <input type="text" id="answer_hint" v-model="form.answer_hint" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-3" placeholder="" />
     </div> 
+     <!-- input feild for explanation -->
         <label for="explanation" class="block text-sm font-medium leading-6 text-gray-900">Explanation</label>
     <div class="mt-2">
       <input type="text" id="explanation" v-model="form.explanation" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-3" placeholder="" />
     </div> 
+     <!-- input feild for marks -->
       <label for="marks" class="block text-sm font-medium leading-6 text-gray-900">Marks</label>
     <div class="mt-2">
       <input type="number" id="marks" v-model="form.marks" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-3" placeholder="" />
     </div>         
       </div>
+       <!-- buttons for save and cancel -->
        <div class="flex flex-row float-right mt-5">
      <button type="button" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 mr-3" @click="open=false">Cancel</button>
  <button type="button" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" @click="save">Save</button>

@@ -1,5 +1,5 @@
 <template>
-<CollectionBanksList @add="add"  :questions="questions"/>
+<CollectionBanksList @add="add"  :questions="getData"/>
 <CollectionBanksAdd  v-if="isAdd" :key="addRender" @save="addQuestion"/>
 
 </template>
@@ -36,6 +36,6 @@ const addQuestion = async (postBody: any) => {
     headers: authHeader,
     body: [postBody],
   });
-  getData.value.unshift(response.value);
+  getData.value.unshift(postBody);
 };
 </script>
