@@ -1,8 +1,8 @@
 <template>
-<CollectionBuildersList @add="add" @edit="edit" @delete="deleteEmployee" :employee="employeeDetails" @serachResults="searchResults"/>
+<CollectionBuildersList @add="add" @edit="edit" @delete="deleteconform" :employee="employeeDetails" @serachResults="searchResults"/>
 <CollectionBuildersAdd  v-if="isAdd" :key="addRender" @save="addEmployee" />
 <CollectionBuildersEdit v-if="isEdit" :key="editRender" :editPrefilledData="editPrefilledData" @saved="saved"/>
-<CollectionBuildersDelete v-if="isDelete" :key="deleteRender"/>
+<CollectionBuildersDelete v-if="isDelete" :key="deleteRender" @deleteconform="deleteEmployee"/>
 </template>
 <script lang="ts" setup>
 import { ref,defineProps} from 'vue'
@@ -30,6 +30,10 @@ const edit = (editData:any,index:number) => {
   isEdit.value = true;
 
 }
+const deleteconform=()=>{
+  isDelete.value=true
+  deleteRender.value++
+}
 //getItems from localStorage
 onMounted(() => {
   const employeeStoredData = localStorage.getItem("employeeData");
@@ -51,6 +55,7 @@ const saved=(editDetails:any)=>{
 const deleteEmployee = (index: number) => {
   employeeDetails.value.splice(index, 1);
   localStorage.setItem("employeeData", JSON.stringify(employeeDetails.value));
+   isDelete.value=false
 };
 const searchResults=(results:any)=>{
 
