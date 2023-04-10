@@ -95,6 +95,6 @@ const props = defineProps({
 const emit=defineEmits(["saved"])
 const saved=()=>{
   open.value=false
-  emit("saved",props.editPrefilledData)
+  emit("saved",props.editPrefilledData) 
 }
 </script>

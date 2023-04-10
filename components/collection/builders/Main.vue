@@ -31,7 +31,7 @@ const edit = (editData:any,index:number) => {
 
 }
 const deleteconform=()=>{
-  isDelete.value=true
+  isDelete.value=true 
   deleteRender.value++
 }
 //getItems from localStorage

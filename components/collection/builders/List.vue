@@ -121,7 +121,7 @@
                     >Delete<span class="sr-only">, {{ item.name }}</span></a
                   >
                 </td>
-              </tr>
+              </tr> 
             </tbody>
           </table>
         </div>
